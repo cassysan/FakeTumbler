@@ -1,2 +1,8 @@
-you are here
+<% @posts.each do |post| %>
+<h1><%= post.title %></h1>
+<p><%= post.body.truncate(15) %></p>
+<%= link_to "view this post", post_path(post) %>
+<% end %>
+<br>
 
+<%= link_to "Add a new Post", new_post_path %>

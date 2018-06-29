@@ -1,1 +1,7 @@
-_form.html.erb
+<h1>Lets write something</h1>
+
+<%= simple_form_for @post do |f| %>
+  <%= f.input :title, label: "Add a title" %>
+  <%= f.input :body, as: :text %>
+  <%= f.submit 'Add' %>
+<% end %>
